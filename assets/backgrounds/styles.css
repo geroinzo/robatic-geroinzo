@@ -1,0 +1,143 @@
+/* Importing pixel fonts from Google Fonts (add more if needed) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* UI color (will be set dynamically via script) */
+  --ui-color: #ffffff;
+}
+
+/* Basic reset and body style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: var(--ui-color);
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container for layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title styling */
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.title span {
+  transition: font-family 1s ease;
+}
+
+/* Generate button fixed as white background and black text */
+.generate-btn {
+  background: #fff;
+  color: #000;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* Poster container */
+.poster {
+  position: relative;
+  width: 1530px;
+  height: 2040px;
+  margin: 20px auto;
+  border: 4px solid var(--ui-color);
+  background: #000;
+  overflow: hidden;
+}
+
+/* Background image */
+.poster .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient overlay (acts as gradient map) */
+.gradient-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Можно менять цвета по вкусу – здесь пример градиента */
+  background: linear-gradient(45deg, #222, #666, #aaa, #444, #000);
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Common style for main image and text overlay (source images are 1080x1080) */
+.poster .main-image,
+.poster .text-overlay {
+  width: 1080px;
+  height: 1080px;
+  object-fit: cover;
+}
+
+/* Composition 1: Classic (center main image, text overlay at bottom) */
+.composition1 .main-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.composition1 .text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Composition 2: Split (left half main image, right half text overlay) */
+.composition2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.composition2 .col {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Composition 3: Overlapping (main image at top-left, text at bottom-right) */
+.composition3 .main-image {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.composition3 .text-overlay {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .poster {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1530 / 2040;
+  }
+}
