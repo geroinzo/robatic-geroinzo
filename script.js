@@ -10,9 +10,9 @@ const CANVAS_WIDTH = 1530;
 const CANVAS_HEIGHT = 2040;
 
 /* Пути к папкам */
-const bgFolder = 'assets/background/';
+const bgFolder = 'assets/backgroundы/';
 const textFolder = 'assets/text/';
-const imageFolder = 'assets/image/';
+const imageFolder = 'assets/images/';
 
 /* Файлы: фон от 1 до 5, текст от 1 до 10.
    Для изображений: все файлы от 1 до 16, где:
