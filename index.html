@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robatic Geroinzo - Poster Generator</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBATIC GEROINZO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Title with each character wrapped in a span -->
-    <h1 id="site-title" class="title"></h1>
-    <button id="generate" class="generate-btn">Generate</button>
-    <div id="poster" class="poster"></div>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <div class="poster-container">
+            <canvas id="posterCanvas" width="1530" height="2040"></canvas>
+        </div>
+        <button id="generate">GENERATE</button>
+    </div>
 </body>
 </html>
