@@ -1,7 +1,7 @@
-/* Подключаем шрифт ZI_SQUARE (скачай ZI_SQUARE.ttf и положи в assets/fonts/) */
+/* Подключаем шрифт ZI_SQUARE (скачайте файл ZI_SQUARE.otf и положите его в assets/fonts/) */
 @font-face {
   font-family: 'ZI_SQUARE';
-  src: url('assets/fonts/ZI_SQUARE.otf') format('truetype');
+  src: url('assets/fonts/ZI_SQUARE.otf') format('opentype');
 }
 
 * {
@@ -21,7 +21,6 @@ body {
   align-items: center;
 }
 
-/* Главный контейнер с двумя колонками */
 .main-container {
   display: flex;
   flex-direction: row;
@@ -29,7 +28,6 @@ body {
   padding: 20px;
 }
 
-/* Левая панель (текст, кнопки) */
 .left-panel {
   display: flex;
   flex-direction: column;
@@ -44,7 +42,6 @@ body {
   white-space: nowrap;
 }
 
-/* Кнопки в пиксельном стиле */
 .pixel-btn {
   font-size: 16px;
   padding: 10px 20px;
@@ -52,16 +49,15 @@ body {
   background: #000;
   color: #fff;
   cursor: pointer;
+  font-family: 'ZI_SQUARE', monospace;
 }
 
-/* Правая панель: рамка для постера */
 .right-panel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Белая рамка для постера. Масштабируем итоговый постер (1530x2040) до меньшего размера */
 .poster-frame {
   width: 382.5px;  /* 1530 / 4 */
   height: 510px;   /* 2040 / 4 */
@@ -73,7 +69,6 @@ body {
   justify-content: center;
 }
 
-/* Canvas масштабируется с сохранением пиксельного стиля */
 #posterCanvas {
   width: 100%;
   height: 100%;
